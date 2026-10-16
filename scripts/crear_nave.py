@@ -6,6 +6,7 @@ Las camaras y luces se crean DESPUES de guardar y exportar el modelo.
 """
 from pathlib import Path
 import math
+import sys
 
 import bpy
 import bmesh
@@ -173,3 +174,17 @@ for name, location in [("nave_perspectiva", (9, -12, 10)), ("nave_posterior", (-
     aim(camera_obj)
     scene.render.filepath = str(PREVIEW / (name + ".png"))
     bpy.ops.render.render(write_still=True)
+
+if "--giro" in sys.argv:
+    # Fotogramas para un GIF que muestra la nave completa desde todos los lados.
+    frames = ROOT / "tmp/giro"
+    frames.mkdir(parents=True, exist_ok=True)
+    scene.render.resolution_x = 720
+    scene.render.resolution_y = 540
+    scene.cycles.samples = 16
+    for frame in range(24):
+        angle = 2 * math.pi * frame / 24 - math.pi / 2
+        camera_obj.location = (14 * math.cos(angle), 14 * math.sin(angle), 10)
+        aim(camera_obj)
+        scene.render.filepath = str(frames / f"{frame:02}.png")
+        bpy.ops.render.render(write_still=True)
