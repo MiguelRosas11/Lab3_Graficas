@@ -4,41 +4,6 @@ Miguel Rosas - 241274 | Graficas por computadora
 
 Nave espacial simple construida en Blender a partir de un solo cubo.
 
-## Que se entrega y donde
-
-Este repositorio contiene el modelo, sus materiales, el editable, las imagenes
-y los scripts de construccion y verificacion. Todos los archivos estan disponibles
-en la tabla de entregables de abajo.
-
-**El enunciado pide un archivo OBJ y una publicacion en Discord; no indica que
-baste con entregar solamente el enlace del repositorio.** Aunque Canvas ofrece
-la opcion de URL web, eso no cambia los requisitos escritos del laboratorio.
-
-Pasos para completar la entrega:
-
-- [x] Crear la nave desde un unico cubo.
-- [x] Exportar y verificar el OBJ triangulado.
-- [x] Incluir el MTL con los colores base y el editable de Blender.
-- [x] Preparar el GIF de la nave y subir los archivos a este repositorio.
-- [ ] Subir [nave_aster.obj](modelo/nave_aster.obj) en la tarea de Canvas.
-- [ ] Adjuntar tambien [nave_aster.mtl](modelo/nave_aster.mtl), si Canvas permite
-  varios archivos, para conservar los colores.
-- [ ] Publicar [nave_giro.gif](capturas/nave_giro.gif) en el Discord de la clase.
-
-Los ultimos pasos son acciones de entrega del alumno y no se completan
-automaticamente al subir commits a GitHub.
-
-## Requisitos del enunciado
-
-- Partir de un cubo, sin agregar otros objetos al modelo.
-- Usar Move, Scale, Rotate, Extrude, Inset, Bevel, Knife y Subdivide; se permiten modificadores.
-- Utilizar materiales de color base simple.
-- Entregar la nave en formato OBJ, triangulada al exportar.
-- Publicar una captura o GIF de la nave en Discord.
-
-Fuente: [Lab 3: Modelo 3D, Canvas](https://uvg.instructure.com/courses/46897/assignments/914730).
-El PDF del pipeline es material de consulta; el enunciado de Canvas define esta entrega.
-
 ## Entregables
 
 | Archivo | Uso |
